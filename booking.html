@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link rel="stylesheet" href="./booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <section class="background">
+        <!--Navigation Bar-->
+        <nav>
+            <section class="header_nav">
+            <section class="navbar">
+                <a href="./index.html"><img src="./new logo.png" alt="logo" class="logo"></a>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./branches.html">Hotel Branches</a></li>
+                    <li><a href="./adventures.html">Adventures</a></li>
+                    <li><a href="./restaurants.html">Restaurants</a></li>
+                    <li><a href="./contact.html">Contact us</a></li>
+                </ul>
+                <section class="bo-btn"><a href="./booking.html">Book Now</a></section>
+            </section>
+            </section>
+        </nav>
+
+        <!--Room Booking Form-->
+        <section class="full-body">
+            <section class="booking-form">
+                <h2>Hotel Booking Form</h2>
+                <form action="index.php" method="get" id="form-1">
+                    <label for="name">Full Name:</label>
+                    <input type="text" name="name" id="name" required>
+     
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+               
+                    <label for="arrival-date">Check-In Date:</label>
+                    <input type="date" name="check-in date" id="check-in-date" required>
+               
+                    <label for="departure-date">Check-Out Date:</label>
+                    <input type="date" name="check-out date" id="check-out-date" required>
+                   
+                    <label for="no. of adults">Number of Adults:</label>
+                    <input type="number" name="no. of adults" id="num-adults" min="0" value="1">
+    
+                    <label for="no. of children">Number of Kids (above 5 years old):</label>
+                    <input type="number" name="no. of adults" id="num-kids"  min="0" value="0">
+    
+                    <label for="room type">Room Type:</label>
+                    <label for="single">No. of Single Rooms</label>
+                    <input type="number" name="single" placeholder="Number of Single Rooms" id="single" min="0" value="0">
+                    <label for="double">No. of Double Rooms</label>
+                    <input type="number" name="double" placeholder="Number of Double Rooms" id="double" min="0" value="0">
+                    <label for="triple">No. of Triple Rooms</label>
+                    <input type="number" name="triple" placeholder="Number of Triple Rooms" id="triple" min="0" value="0">
+                    
+                    <label for="requirements">Extra Requirements:</label>
+                    <section class="requirements">
+                        <section class="req1">
+                            <label for="requirements">WiFi</label>
+                            <input type="checkbox" id="req-1" name="extra-req">
+                        </section>
+    
+                        <section class="req2">
+                            <label for="requirements">Pool View</label>
+                             <input type="checkbox" id="req-2" name="extra-req">
+                        </section>
+    
+                        <section class="req3">
+                            <label for="requirements">Garden View</label>
+                            <input type="checkbox" id="req-3" name="extra-req">
+                        </section>
+                    </section>
+    
+                    <label for="extra beds">Extra Beds:</label>
+                    <input type="number" name="beds" id="extra-beds" min="0" max="10" value="0">
+    
+                    <label for="promo code">Promo Code:</label>
+                    <input type="number" name="promo code" id="promo-code" placeholder="Enter Promo Code">
+
+                    <!--current room booking-->
+                    <hr>
+                    <label for="current booking" id="output-name1">Current Room Booking</label>
+                    <fieldset class="output-1">
+                        <table class="booking-table2" id="room-booking-output">
+    
+                        </table>
+                    </fieldset>
+
+                    <!--room booking button-->
+                    <section class="booking-btn1">
+                        <button type="submit" id="book-now1">Book Now</button>
+                    </section>
+                </form>
+            </section>
+
+            <!--Adventure Booking Form-->
+            <section class="booking-form2">
+                <h2>Book Your Diving Adventure</h2>
+                <form action="index.php" method="get" id="form-2">
+                    <label for="name">Full Name:</label>
+                    <input type="text" name="name" id="ad-name" required>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="ad-email" required>
+
+                    <label for="number">Telephone Number:</label>
+                    <input type="number" name="number" id="ad-number" required>
+    
+                    <label for="date">Date:</label>
+                    <input type="date" name="date" id="ad-date" required>
+    
+                    <label for="duration">Duration:</label>
+                    <input type="number" name="time" id="ad-duration" placeholder="Hours" min="0" max="24" required>
+    
+                    <label for="Nationality">Nationality:</label>
+                    <select name="nationality" id="ad-nationality">
+                        <option value="Local" selected>Local</option>
+                        <option value="Foreign">Foreign</option>
+                    </select>
+                   
+                    <label for="Number of Adults">Number of Adults</label>
+                    <input type="number" name="no. of adults" placeholder="Number of Adults" id="ad-adults" min="0" value="1">
+
+                    <label for="Number of Children">Number of Kids</label>
+                    <input type="number" name="no. of children" placeholder="Number of Children" id="ad-kids"  min="0" value="0">
+    
+                    <label for="guide">Guide Requirements:</label>
+                    <section class="guide">
+                        <section class="guide-req1">
+                            <label for="requirements">Adult</label>
+                            <input type="checkbox" id="guide-adult" name="guide" value="0">
+                        </section>
+    
+                        <section class="guide-req1">
+                            <label for="requirements">Kid</label>
+                             <input type="checkbox" id="guide-kid" name="guide" value="0">
+                        </section>
+                    </section>
+
+                    <!--current adventure booking-->
+                    <hr>
+                    <label for="current booking" id="output-name2">Current Adventure Booking</label>
+                    <fieldset class="output-2">
+                        <table class="booking-table2" id="adventure-booking-output">
+    
+                        </table>
+                    </fieldset>
+                    
+                    <!--adventure booking button-->
+                    <section class="booking-btn2">
+                        <button type="submit" id="book-now2">Adventure Booking</button>
+                    </section>
+
+                    <!--pop up message-->
+                    <section class="popupContainer" id="popupContainer">
+                        <section id="thankYou">
+                            <h2>Thank You !</h2>
+                        </section>
+
+                        <section class="details_container">
+                            <p id="popupDetails"></p>
+                        </section>
+
+                        <section class="summery_container">
+                            <p id="summery"></p>
+                        </section>
+
+                        <input type="button" value="OK" id="ok">
+                    </section>
+
+                </form>
+            </section>
+        </section>
+
+        <!--Overall room booking output-->
+        <section id="overall-output-section">
+                <label for="overall booking" id="title-output">Overall Booking</label>
+                <fieldset class="output-3">
+                        <table class="booking-table" id="overall-output">
+            
+                        </table>
+                </fieldset>
+        </section>
+
+        <!--add to favourite button-->
+        <section class="fav-btn">
+            <button type="submit" id="favourite">Add to favourites</button>
+        </section>
+
+        <!--check loyalty button-->
+        <section class="loyalty-btn">
+            <button type="submit" id="loyalty">Check loyalty</button>
+        </section>
+        
+    </section>
+
+                <!--Footer-->
+                <footer class="footer">
+                    <section class="footer-container">
+                        <section class="row">
+                            <section class="footer-col">
+                                <h4>Hotel</h4>
+                                <ul>
+                                    <li><a href="#">about us</a></li>
+                                    <li><a href="#">our services</a></li>
+                                    <li><a href="#">privacy policy</a></li>
+                                </ul>
+                            </section>
+                            <section class="footer-col">
+                                <h4>get help</h4>
+                                <ul>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">contact us</a></li>
+                                    <li><a href="#">Contact Form</a></li>
+                                    <li><a href="#">Live Chat Support</a></li>
+                                    <li><a href="#">24/7 Customer service</a></li>
+                                </ul>
+                            </section>
+                            <section class="footer-col">
+                                <h4>payments</h4>
+                                <ul>
+                                    <li><a href="#">Pay at Hotel</a></li>
+                                    <li><a href="#">Bank Transfers</a></li>
+                                    <li><a href="#">Online Payment Gateways</a></li>
+                                </ul>
+                            </section>
+                            <section class="footer-col">
+                                <h4>follow us</h4>
+                                <section class="social-links">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+               </footer>
+
+    <script src="./booking.js"></script>
+</body>
+</html>
